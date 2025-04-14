@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Puppy Spa Waiting List App
+
+A modern web application for managing a waiting list for a puppy grooming spa. Built with Next.js, React, and TypeScript.
+
+This project is a programming exercise based on the challenge described here:
+[Puppy Spa Waiting List App 2025](https://along-hq.notion.site/Puppy-Spa-Waiting-List-App-2025-267ba9624bc349a2bb60e0562850aef3)
+
+## Features
+
+- Add puppies to the waiting list with their details
+- View the current waiting list
+- Remove puppies from the list when their appointment is complete
+- Data persists in local storage
+
+## System Design & Architecture
+
+### Overview
+The application follows a modern web architecture with a clear separation of concerns:
+
+- **Frontend**: Next.js with React for a responsive, interactive UI
+- **Database**: Postgres for persistent storage
+- **State Management**: React Hooks for local state and context for shared state
+
+### Design Decisions
+- **Next.js**: Used as required by the exercise specifications
+- **TypeScript**: Ensures type safety across the codebase, reducing runtime errors
+- **Postgres**: Selected for relational data storage with robust ACID compliance
+
+### Implemented User Stories
+- User can view the waiting list of puppies by date
+- User can add a new puppy to the waiting list with various details
+- User can mark a puppy's grooming as complete
+- User can search for specific puppies in the system
+- User can move puppies up and down in the waiting list
+- Data persists between sessions
+
+## Best Practices Implemented
+- **Component Architecture**: Reusable, single-responsibility components
+- **Custom Hooks**: Extraction of complex logic into reusable hooks
+- **TypeScript Interfaces**: Strong typing for all data structures
+- **Error Handling**: Comprehensive error states and user feedback
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Performance Optimization**: Memoization and debounced search
+- **Code Organization**: Clear project structure and module separation
+
+## Tech Stack
+
+- **Framework**: Next.js 15.3
+- **UI Library**: React 19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **State Management**: React Hooks
+- **Storage**: Postgres
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
+
+```bash
+git clone https://github.com/lowenbjer/puppy-spa.git
+cd puppy-spa
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/app` - Next.js app router pages and components
+  - `/components` - Reusable UI components
+  - `/hooks` - Custom React hooks
+- `/public` - Static assets
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The application is deployed on Vercel and can be accessed at:
+[Puppy Spa App](https://puppy-spa-lowenbjer.vercel.app) 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The deployment process is automated with GitHub integration, with a simple push to the main branch:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+This project was created as a solution to the Puppy Spa Waiting List programming exercise.
